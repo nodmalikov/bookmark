@@ -354,11 +354,12 @@ img {
     color: var(--text-color-saucer);
     background-color: #f7f7f7;
     border: 2px solid transparent;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .buttons-hero__light:hover {
     border-color: var(--text-color-saucer);
+    background-color: #fff;
 }
 
 .hero__img {
