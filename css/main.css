@@ -329,7 +329,7 @@ img {
 .buttons-hero__blue,
 .buttons-hero__light {
     background-color: var(--striking-color);
-    padding: 10px 25px;
+    padding: 8px 24px;
     font-weight: 500;
     font-size: 14px;
     line-height: 28px;
@@ -338,11 +338,25 @@ img {
 .buttons-hero__blue {
     background-color: var(--striking-color);
     margin-right: 16px;
+    border: 2px solid var(--striking-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buttons-hero__blue:hover {
+    background-color: #fff;
+    color: var(--striking-color);
+
 }
 
 .buttons-hero__light {
     color: var(--text-color-saucer);
     background-color: #f7f7f7;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.buttons-hero__light:hover {
+    border-color: var(--text-color-saucer);
 }
 
 .hero__img {
