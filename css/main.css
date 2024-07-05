@@ -85,6 +85,7 @@ img {
     font-weight: 500;
     border-radius: 5px;
     display: inline-block;
+    text-decoration: none;
 }
 
 /* CONTAINER */
@@ -111,6 +112,7 @@ img {
 .site-header__container {
     display: flex;
     align-items: center;
+    max-width: 1140px;
 }
 
 /* LOGO */
@@ -161,7 +163,7 @@ img {
 .button-login {
     background-color: var(--component-color);
     border: 2px solid var(--component-color);
-    padding: 8px 28px;
+    padding: 9px 30px;
     text-transform: uppercase;
     font-size: 13px;
     line-height: 17px;
@@ -279,6 +281,78 @@ img {
 .logo-hamburger-none {
     opacity: 0;
 }
+
+
+/* HERO */
+.hero {
+    padding-top: 66px;
+    padding-bottom: 105px;
+    background-image: url("../img/main/bg-img.svg");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 710px) 200px;
+}
+
+.hero__container {
+    display: flex;
+    max-width: 1150px;
+}
+
+.hero__text {
+    padding-top: 70px;
+    width: 540px;
+    margin-right: 65px;
+    flex-shrink: 0;
+}
+
+.hero__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: -0.15px;
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 24px;
+    text-transform: capitalize;
+}
+
+.hero__subtitle {
+    margin-top: 0;
+    margin-bottom: 32px;
+    color: var(--text-color-half);
+}
+
+.hero__buttons {
+    display: inline-flex;
+    align-items: center;
+}
+
+.buttons-hero__blue,
+.buttons-hero__light {
+    background-color: var(--striking-color);
+    padding: 10px 25px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.buttons-hero__blue {
+    background-color: var(--striking-color);
+    margin-right: 16px;
+}
+
+.buttons-hero__light {
+    color: var(--text-color-saucer);
+    background-color: #f7f7f7;
+}
+
+.hero__img {
+    flex-shrink: 0;
+    width: 578px;
+    height: 385px;
+    object-fit: contain;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
 
 /* MEDIA-QUERIES */
 /* 700PX */
