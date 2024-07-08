@@ -371,7 +371,7 @@ img {
 
 /* FEATURES */
 .features {
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     background-image: url("../img/main/bg-img.svg");
     background-repeat: no-repeat;
     background-position: calc(50% - 585px) 428px;
@@ -648,17 +648,17 @@ img {
     
     .features__contents .features__content:first-child .content-features__img {
         margin-right: 0px;
-        margin-bottom: 140px;
+        margin-bottom: 70px;
     }
     
     .features__contents .features__content:nth-child(2) .content-features__img {
         margin-right: 0px;
-        margin-bottom: 140px;
+        margin-bottom: 70px;
     }
     
     .features__contents .features__content:nth-child(3) .content-features__img {
         margin-right: 0px;
-        margin-bottom: 140px;
+        margin-bottom: 70px;
     }
     
     .content-features__text {
