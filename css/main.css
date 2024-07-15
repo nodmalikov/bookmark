@@ -483,6 +483,10 @@ img {
     opacity: 1;
 }
 
+.content-features__text {
+    max-width: 445px;
+}
+
 .content-features__img {
     object-fit: contain;
 }
@@ -903,7 +907,8 @@ img {
     }
     
     .features {
-        background-position: calc(50% - 300px) 420px;
+        background-position: calc(50% - 300px) 390px;
+        padding-bottom: 140px;
     }
     
     .features__content {
@@ -976,7 +981,7 @@ img {
     }
     
     .features {
-        background-position: calc(50% - 300px) 570px;
+        background-position: calc(50% - 300px) 550px;
     }
 }
 
@@ -1189,7 +1194,7 @@ img {
     
     .features {
         background-size: 577px 203px;
-        background-position: calc(50% - 180px) 595px;
+        background-position: calc(50% - 180px) 590px;
     }
     
     .features__title {
