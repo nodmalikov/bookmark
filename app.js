@@ -3,6 +3,8 @@ const elOpenMenuBtn = document.querySelector('.js-open-menu');
 const elCloseMenuBtn = document.querySelector('.js-close-menu');
 const elMobileHeader = document.querySelector('.mobile-header');
 const elHeaderLogo = document.querySelector('.site-header__logo');
+const elHeader = document.querySelector('.site-header');
+const elMainContent = document.querySelector('.main-content');
 
 if (elOpenMenuBtn) {
     elOpenMenuBtn.addEventListener('click', function () {
@@ -61,13 +63,13 @@ function toggleFeature(activeInfo, activeLink) {
             info.classList.remove('features__content--active');
         }
     });
-
+    
     allLinks.forEach(link => {
         if (link !== activeLink) {
             link.classList.remove('menu-features__link--active');
         }
     });
-
+    
     activeInfo.classList.add('features__content--active');
     activeLink.classList.add('menu-features__link--active');
 }
@@ -79,11 +81,11 @@ const elAccordionBadge = document.querySelectorAll('.accordion__icon');
 
 elAccordionHeader.forEach((ac, index) => {
     ac.addEventListener('click', function () {
-        // Hozirgi bosilgan accordionni toggle qilish
+        // HOZIRGI BOSILGAN ACCORDIONNI TOGGLE QILISH
         elAccordionContent[index].classList.toggle('accordion__active');
         elAccordionBadge[index].classList.toggle('accordion__rotate');
-
-        // Barcha boshqa accordionlarni yopish
+        
+        // BARCHA BOSHQA ACCORDIONLARNI YOPISH
         elAccordionContent.forEach((content, i) => {
             if (i !== index) {
                 content.classList.remove('accordion__active');
@@ -92,3 +94,25 @@ elAccordionHeader.forEach((ac, index) => {
         });
     });
 });
+
+// SCROLL
+window.onscroll = function() {
+    const offset = elHeader.offsetHeight;
+    if (window.scrollY > offset - 20) {
+        elHeader.classList.add('header-border');
+    } else if (window.scrollY < offset - 20) {
+        elHeader.classList.remove('header-border');
+    }
+}
+
+// FUNCTION TO UPDATE MAIN CONTENT'S MARGIN-TOP BASED ON HEADER'S HEIGHT
+function updateMainContentMargin() {
+    const headerHeight = elHeader.offsetHeight;
+    elMainContent.style.marginTop = `${headerHeight}px`;
+}
+
+// UPDATE MAIN CONTENT'S MARGIN INITIALLY
+updateMainContentMargin();
+
+// OPTIONAL: UPDATE MAIN CONTENT'S MARGIN IF THE HEADER'S HEIGHT CHANGES DYNAMICALLY
+new ResizeObserver(updateMainContentMargin).observe(elHeader);

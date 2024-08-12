@@ -127,6 +127,14 @@ img {
 .site-header {
     padding-top: 48px;
     padding-bottom: 48px;
+    position: fixed;
+    width: 100%;
+    z-index: 90;
+    background-color: #fff;
+}
+
+.header-border {
+    border-bottom: 2px solid var(--striking-color);
 }
 
 .site-header__container {
