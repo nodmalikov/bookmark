@@ -125,8 +125,8 @@ img {
 
 /* SITE-HEADER */
 .site-header {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     position: fixed;
     width: 100%;
     z-index: 90;
@@ -1003,6 +1003,11 @@ img {
     .site-header__hamburger {
         display: block;
     }
+
+    .site-header {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
     
     .hero__img {
         align-self: center;
@@ -1040,10 +1045,6 @@ img {
 
 /* 600PX */
 @media only screen and (max-width: 600px) {
-    .site-header {
-        padding-bottom: 80px;
-    }
-    
     .hero {
         padding-top: 0;
         padding-bottom: 140px;
@@ -1246,10 +1247,6 @@ img {
 
 /* 365PX */
 @media only screen and (max-width: 365px) {
-    .site-header {
-        padding-bottom: 60px;
-    }
-    
     .hero {
         padding-bottom: 100px;
     }
@@ -1263,11 +1260,6 @@ img {
 @media only screen and (max-width: 350px) {
     .mobile-login {
         width: 250px;
-    }
-    
-    .site-header {
-        padding-top: 45px;
-        padding-bottom: 45px;
     }
     
     .hero {
