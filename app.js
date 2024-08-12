@@ -81,14 +81,23 @@ const elAccordionBadge = document.querySelectorAll('.accordion__icon');
 
 elAccordionHeader.forEach((ac, index) => {
     ac.addEventListener('click', function () {
-        // HOZIRGI BOSILGAN ACCORDIONNI TOGGLE QILISH
-        elAccordionContent[index].classList.toggle('accordion__active');
+        // Toggle current accordion
+        const content = elAccordionContent[index];
+        const isActive = content.classList.toggle('accordion__active');
         elAccordionBadge[index].classList.toggle('accordion__rotate');
         
-        // BARCHA BOSHQA ACCORDIONLARNI YOPISH
-        elAccordionContent.forEach((content, i) => {
+        // Set max-height based on the content's scroll height
+        if (isActive) {
+            content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+            content.style.maxHeight = null;
+        }
+        
+        // Close all other accordions
+        elAccordionContent.forEach((otherContent, i) => {
             if (i !== index) {
-                content.classList.remove('accordion__active');
+                otherContent.classList.remove('accordion__active');
+                otherContent.style.maxHeight = null;
                 elAccordionBadge[i].classList.remove('accordion__rotate');
             }
         });
