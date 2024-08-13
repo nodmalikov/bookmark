@@ -81,19 +81,19 @@ const elAccordionBadge = document.querySelectorAll('.accordion__icon');
 
 elAccordionHeader.forEach((ac, index) => {
     ac.addEventListener('click', function () {
-        // Toggle current accordion
+        // TOGGLE CURRENT ACCORDION
         const content = elAccordionContent[index];
         const isActive = content.classList.toggle('accordion__active');
         elAccordionBadge[index].classList.toggle('accordion__rotate');
         
-        // Set max-height based on the content's scroll height
+        // SET MAX-HEIGHT BASED ON THE CONTENT'S SCROLL HEIGHT
         if (isActive) {
             content.style.maxHeight = content.scrollHeight + "px";
         } else {
             content.style.maxHeight = null;
         }
         
-        // Close all other accordions
+        // CLOSE ALL OTHER ACCORDIONS
         elAccordionContent.forEach((otherContent, i) => {
             if (i !== index) {
                 otherContent.classList.remove('accordion__active');
