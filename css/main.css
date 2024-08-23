@@ -1353,4 +1353,9 @@ img {
     .content-features__heading {
         line-height: 30px;
     }
+    
+    .extension__card {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
 }
